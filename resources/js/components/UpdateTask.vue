@@ -2,61 +2,57 @@
     <div>
         <transition name="fade">
             <form v-if="updateFormState">
-                <div class="field">
-                    <label for="name">Имя</label>
-                    <input v-model="name" type="text" id="name" name="name">
-                </div>
-
-                <div class="field">
-                    <label for="description">Описание </label>
-                    <textarea v-model="description" id="description" name="description"></textarea>
-                </div>
 
                 <div class="field">
                     <label for="status">Статус </label>
-                    <select v-model="status"  id="status" name="status">
+                    <select v-model="status" id="status" name="status">
                         <option>TODO</option>
                         <option>DOING</option>
                         <option>DONE</option>
                     </select>
                 </div>
 
+                <div class="field">
+                    <label for="comment">Комментарий</label>
+                    <br>
+                    <textarea v-model="comment" id="comment" name="comment"></textarea>
+                </div>
+
                 <button v-on:click.prevent="submit" type="submit">Сохранить</button>
+
+                <div class="comments">
+                    <div v-for="comment in comments">
+                        <p>{{comment.created_at}}</p>
+                        <p>{{comment.comment}}</p>
+                    </div>
+                </div>
+
             </form>
         </transition>
-
-
     </div>
 </template>
 
 <script>
 
-
     export default {
-
-
         computed: {
-
             updateFormState() {
                 return this.$store.getters.updateFormState;
             },
 
-            name: {
+            comments() {
+                return this.$store.getters.comments;
+            },
+
+            comment: {
                 get() {
-                    return this.$store.state.name;
+                    return this.$store.state.comment;
                 },
-                set(name) {
-                    this.$store.commit('setName', name)
+                set(comment) {
+                    this.$store.commit('setComment', comment);
                 }
             },
-            description: {
-                get() {
-                    return this.$store.state.description;
-                },
-                set(description) {
-                    this.$store.commit('setDescription', description)
-                }
-            },
+
             status: {
                 get() {
                     return this.$store.state.status;
@@ -65,26 +61,18 @@
                     this.$store.commit('setStatus', status)
                 }
             },
-
-
         },
 
-
         methods: {
-
             submit() {
                 this.$store.dispatch('updateTaskSubmit');
                 this.$root.$store.dispatch('taskList');
             }
         }
-
-
     }
 </script>
 
-
 <style scoped>
-
     div.field {
         padding-bottom: 5px;
     }
@@ -104,10 +92,7 @@
         transition: opacity .5s;
     }
 
-    .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */
-    {
+    .fade-enter, .fade-leave-to {
         opacity: 0;
     }
-
 </style>
-

@@ -1,6 +1,5 @@
 export default {
     actions: {
-
         updateTask(context, id) {
             axios.get('api/update', {
                 params: {
@@ -8,46 +7,49 @@ export default {
                 }
             }).then(response => {
                 context.commit('setUpdateId', response.data.id);
-                context.commit('setName', response.data.name);
-                context.commit('setDescription', response.data.description);
-                context.commit('setStatus', response.data.status);
+                context.commit('getComments', response.data.comments);
             })
         },
 
-        updateTaskSubmit({state}) {
+        updateTaskSubmit({state, commit}) {
             axios.post('api/updateStore', {
                 id: state.id,
-                name: state.name,
-                description: state.description,
                 status: state.status,
-            });
+                comment: state.comment,
+            }).then(response => {
+                commit('updateFormState');
+            })
         }
-
-
     },
 
     mutations: {
         setUpdateId: (state, id) => state.id = id,
-        setName: (state, name) => state.name = name,
-        setDescription: (state, description) => state.description = description,
         setStatus: (state, status) => state.status = status,
-
-        updateFormState: (state) => state.updateFormState = !state.updateFormState,
+        setComment: (state, comment) => state.comment = comment,
+        getComments: (state, comments) => state.comments = comments,
+        updateFormState: (state) => {
+            state.updateFormState = !state.updateFormState;
+            state.comment = '';
+        }
     },
 
     state: {
-        name: '',
-        description: '',
         status: '',
         updateFormState: false,
         id: '',
+        comment: '',
+        comments: [],
     },
 
     getters: {
         updateFormState(state) {
             return state.updateFormState;
+        },
+
+        comments(state) {
+            return state.comments.sort(function (itemA, itemB) {
+                return (itemB.id - itemA.id)
+            });
         }
-
     },
-
 }

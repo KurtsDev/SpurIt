@@ -3,8 +3,6 @@ require('./bootstrap');
 import App from './App';
 import store from './store'
 
-
-
 const app = new Vue({
     el: '#app',
     store,
@@ -12,5 +10,4 @@ const app = new Vue({
         App
     },
     render: h => h(App)
-
 });

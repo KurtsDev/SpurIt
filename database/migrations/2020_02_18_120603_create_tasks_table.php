@@ -18,7 +18,6 @@ class CreateTasksTable extends Migration
             $table->text('name')->nullable();
             $table->text('description')->nullable();
             $table->text('status')->nullable();
-            $table->text('comments')->nullable();
             $table->timestamps();
         });
     }

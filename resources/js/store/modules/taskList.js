@@ -6,16 +6,12 @@ export default {
                     context.commit('getList', response.data)
                 })
         },
-
-
     },
 
     mutations: {
         getList(state, tasks) {
             state.tasks = tasks;
-
         }
-
     },
 
     state: {
@@ -23,11 +19,8 @@ export default {
     },
 
     getters: {
-
         taskList(state) {
             return state.tasks;
         }
-
     },
-
 }

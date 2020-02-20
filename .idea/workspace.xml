@@ -2,23 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b8d8d83-41a3-4e9b-a41c-c1c2fbcc0d25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/TaskCreatedForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/TaskList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Tasks.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/UpdateTask.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/taskCreatedForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/taskList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/tasks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/updateTask.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_18_120603_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_18_120603_create_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/TaskCreatedForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TaskCreatedForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/TaskList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TaskList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Tasks.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/UpdateTask.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/UpdateTask.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/taskCreatedForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/taskCreatedForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/taskList.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/taskList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/tasks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/updateTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/updateTask.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -168,7 +172,8 @@
       <workItem from="1582027041456" duration="22000" />
       <workItem from="1582027141272" duration="14583000" />
       <workItem from="1582105469682" duration="5000" />
-      <workItem from="1582105483924" duration="23175000" />
+      <workItem from="1582105483924" duration="33649000" />
+      <workItem from="1582188602484" duration="4487000" />
     </task>
     <servers />
   </component>
@@ -200,17 +205,21 @@
       <screen x="0" y="0" width="1366" height="743" />
     </state>
     <state width="1320" height="422" key="GridCell.Tab.0.right/0.0.1366.743@0.0.1366.743" timestamp="1582104044655" />
-    <state x="369" y="107" width="766" height="592" key="find.popup" timestamp="1582106693677">
+    <state x="369" y="107" width="766" height="592" key="find.popup" timestamp="1582156098071">
       <screen x="0" y="0" width="1366" height="743" />
     </state>
-    <state x="369" y="107" width="766" height="592" key="find.popup/0.0.1366.743@0.0.1366.743" timestamp="1582106693677" />
+    <state x="369" y="107" width="766" height="592" key="find.popup/0.0.1366.743@0.0.1366.743" timestamp="1582156098071" />
+    <state x="346" y="164" key="run.anything.popup" timestamp="1582160089781">
+      <screen x="0" y="0" width="1366" height="743" />
+    </state>
+    <state x="346" y="164" key="run.anything.popup/0.0.1366.743@0.0.1366.743" timestamp="1582160089781" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/TaskController.php</url>
-          <line>39</line>
+          <line>37</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

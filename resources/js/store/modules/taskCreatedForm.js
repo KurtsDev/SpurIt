@@ -21,9 +21,4 @@ export default {
         description: '',
         status: '',
     },
-
-    getters: {
-
-    },
-
 }

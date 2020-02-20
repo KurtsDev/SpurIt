@@ -14,4 +14,9 @@ class Task extends Model
         'status',
         'comments'
     ];
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
 }

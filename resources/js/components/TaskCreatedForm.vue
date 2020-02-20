@@ -4,6 +4,7 @@
 
         <transition name="fade">
             <form v-if="$data.formState">
+
                 <div class="field">
                     <label for="name">Имя</label>
                     <input v-model="name" type="text" id="name" name="name">
@@ -16,7 +17,7 @@
 
                 <div class="field">
                     <label for="status">Статус </label>
-                    <select v-model="status"  id="status" name="status">
+                    <select v-model="status" id="status" name="status">
                         <option>TODO</option>
                         <option>DOING</option>
                         <option>DONE</option>
@@ -27,16 +28,11 @@
             </form>
         </transition>
 
-
     </div>
 </template>
 
 <script>
-
-
     export default {
-
-
         computed: {
 
             name: {
@@ -63,8 +59,6 @@
                     this.$store.commit('setStatus', status)
                 }
             },
-
-
         },
 
         data: function () {
@@ -79,15 +73,12 @@
             },
 
             submit() {
-                this.$store.dispatch('submitTask')
+                this.$store.dispatch('submitTask');
                 this.$root.$store.dispatch('taskList');
             }
         }
-
-
     }
 </script>
-
 
 <style scoped>
 
@@ -110,10 +101,7 @@
         transition: opacity .5s;
     }
 
-    .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */
-    {
+    .fade-enter, .fade-leave-to {
         opacity: 0;
     }
-
 </style>
-
