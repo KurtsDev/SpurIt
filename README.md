@@ -1,10 +1,17 @@
 Запуск:
+
 1 Склонировать проект
+
 2 composer install
+
 3 npm install
+
 4 Создать БД mySql, в файле .env прописать DB_DATABASE,DB_USERNAME, DB_PASSWORD
+
 5 В корне проекта запустить php artisan migrate
+
 6 Запустить php artisan serve, перейти на http://127.0.0.1:8000
+
 
 Тестовое задание:
 
